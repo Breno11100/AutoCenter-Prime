@@ -85,10 +85,10 @@
 }
 
 /* 🔥 BLOCO DO VALOR (DESTAQUE PRINCIPAL) */
-.card div:last-child p:nth-child(3) {
+.card div:last-child p:nth-child {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #ffd000;
+
 }
 
 /* 🔥 SERVIÇOS */

@@ -122,3 +122,31 @@
   color: #fff;
 
 }
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filtros button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #232833;
+  color: white;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background: #ffd000;
+  color: #000;
+}
+
+/* botão ativo (selecionado) */
+.ativoFiltro {
+  background: #00a86b;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 168, 107, 0.4);
+}

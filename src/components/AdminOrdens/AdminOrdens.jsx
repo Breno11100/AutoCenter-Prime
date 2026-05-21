@@ -62,19 +62,42 @@ function AdminOrdens() {
     });
   }
 
-  function calcularTotal(ordemId) {
-    const selecionados = servicosSelecionados[ordemId] || [];
-    return selecionados.reduce((acc, s) => acc + Number(s.valor_base), 0);
+  // ❌ ANTIGO (removido cálculo errado por estado local)
+  // function calcularTotal(ordemId) { ... }
+
+  // ✔ NOVO: cálculo baseado no banco
+  function calcularTotalOrdem(ordem) {
+    const itens = ordem.ordem_servico_itens || [];
+
+    return itens.reduce((acc, item) => {
+      return acc + Number(item.servicos?.valor_base || 0);
+    }, 0);
   }
 
-  function abrirModal(ordemId) {
-    setModalAberto(ordemId);
+  function abrirModal(ordem) {
+
+    const itens = ordem.ordem_servico_itens || [];
+
+    setServicosSelecionados(prev => ({
+      ...prev,
+      [ordem.id]: itens.map(i => ({
+        id: i.servico_id,
+        valor_base: i.servicos?.valor_base || 0,
+        nome: i.servicos?.nome
+      }))
+    }));
+
+    setModalAberto(ordem.id);
   }
 
   async function salvarOrdem(ordemId) {
 
     const selecionados = servicosSelecionados[ordemId] || [];
-    const total = calcularTotal(ordemId);
+
+    const total = selecionados.reduce(
+      (acc, s) => acc + Number(s.valor_base),
+      0
+    );
 
     await supabase
       .from("ordens_servico")
@@ -115,7 +138,6 @@ function AdminOrdens() {
 
       <h1>Ordens de Serviço</h1>
 
-      {/* 🔥 FILTRO REAL */}
       <div className={styles.filtros}>
 
         {[
@@ -140,7 +162,7 @@ function AdminOrdens() {
 
         {ordens.map((item) => {
 
-          const total = calcularTotal(item.id);
+          const total = calcularTotalOrdem(item);
 
           return (
             <div key={item.id} className={styles.card}>
@@ -170,11 +192,11 @@ function AdminOrdens() {
 
                 <p>{item.descricao}</p>
 
-                <p><strong>Total: R$ {total}</strong></p>
+                <p><strong>Total: R$ {total.toFixed(2)}</strong></p>
 
                 <button
                   className={styles.salvar}
-                  onClick={() => abrirModal(item.id)}
+                  onClick={() => abrirModal(item)}
                 >
                   Selecionar Serviços
                 </button>
@@ -194,7 +216,6 @@ function AdminOrdens() {
 
       </div>
 
-      {/* MODAL (mantido igual) */}
       {modalAberto && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
@@ -231,7 +252,13 @@ function AdminOrdens() {
             </div>
 
             <p className={styles.total}>
-              <strong>Total: R$ {calcularTotal(modalAberto)}</strong>
+              <strong>
+                Total: R$ {
+                  (servicosSelecionados[modalAberto] || [])
+                    .reduce((acc, s) => acc + Number(s.valor_base), 0)
+                    .toFixed(2)
+                }
+              </strong>
             </p>
 
             <div className={styles.modalActions}>

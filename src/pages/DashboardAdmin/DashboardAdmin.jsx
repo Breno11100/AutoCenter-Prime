@@ -9,7 +9,6 @@ import AdminOrdens from "../../components/AdminOrdens/AdminOrdens";
 import AdminClientes from "../../components/AdminClientes/AdminClientes";
 import AdminVeiculos from "../../components/AdminVeiculos/AdminVeiculos";
 import AdminFinanceiro from "../../components/AdminFinanceiro/AdminFinanceiro";
-import AdminEstoque from "../../components/AdminEstoque/AdminEstoque";
 import AdminConfiguracoes from "../../components/AdminConfiguracoes/AdminConfiguracoes";
 
 function DashboardAdmin() {
@@ -55,10 +54,6 @@ function DashboardAdmin() {
           Financeiro
         </button>
 
-        <button onClick={() => setSecao("estoque")}>
-          Estoque
-        </button>
-
         <button onClick={() => setSecao("configuracoes")}>
           Configurações
         </button>
@@ -81,7 +76,6 @@ function DashboardAdmin() {
         {secao === "clientes" && <AdminClientes />}
         {secao === "veiculos" && <AdminVeiculos />}
         {secao === "financeiro" && <AdminFinanceiro />}
-        {secao === "estoque" && <AdminEstoque />}
         {secao === "configuracoes" && <AdminConfiguracoes />}
 
       </main>
