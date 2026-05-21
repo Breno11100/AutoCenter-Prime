@@ -145,8 +145,6 @@ function ClienteAgendamentos() {
 
     }
 
-    alert("Agendamento criado com sucesso!");
-
     setVeiculoSelecionado("");
 
     setDescricao("");

@@ -58,12 +58,6 @@ function AdminClientes() {
       return;
     }
 
-    alert(
-      statusAtual
-        ? "Cliente desativado!"
-        : "Cliente ativado!"
-    );
-
     carregarClientes();
   }
 

@@ -93,7 +93,7 @@ function AdminAgendamentos() {
       {/* 🔥 BOTÕES DE FILTRO */}
       <div className={styles.filtros}>
 
-        {["todos", "pendente", "aprovado", "cancelado"].map((status) => (
+        {["todos", "Pendente", "aprovado", "cancelado"].map((status) => (
           <button
             key={status}
             onClick={() => setFiltro(status)}

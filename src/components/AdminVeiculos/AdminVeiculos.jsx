@@ -58,12 +58,6 @@ function AdminVeiculos() {
       return;
     }
 
-    alert(
-      statusAtual
-        ? "Veículo desativado!"
-        : "Veículo ativado!"
-    );
-
     carregarVeiculos();
   }
 

@@ -113,8 +113,6 @@ function ClienteVeiculo() {
 
     }
 
-    alert("Veículo cadastrado!");
-
     setMarca("");
 
     setModelo("");
