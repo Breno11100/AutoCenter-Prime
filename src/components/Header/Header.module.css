@@ -66,3 +66,30 @@
   transform: translateY(-2px);
   background: #ffe44d;
 }
+
+/*Responsividade*/
+@media (max-width: 900px) {
+
+  .header {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+  }
+
+  .loginButton {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    border-radius: 30px;
+  }
+}

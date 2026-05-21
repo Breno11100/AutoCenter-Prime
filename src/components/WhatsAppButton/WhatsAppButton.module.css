@@ -28,7 +28,19 @@
   transform:scale(1.1);
 }
 
-.button img{
-  width:70px;
-  height:70px;
+.button img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/*Responsividade*/
+
+@media (max-width: 768px) {
+  .button {
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+  }
 }

@@ -131,3 +131,103 @@
   background: #ffe44d;
   transform: translateY(-3px);
 }
+
+/*Responsividade*/
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 100px 60px;
+  }
+
+  .top h2 {
+    font-size: 3rem;
+  }
+
+  .container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 25px;
+  }
+
+  .top h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .top p {
+    font-size: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  /* MAPA */
+  .map {
+    height: 220px;
+    border-radius: 20px;
+  }
+
+  /* TELEFONE */
+  .phoneCard {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .phoneCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .phoneCard p {
+    font-size: 1rem;
+  }
+
+  /* FORM */
+  .form {
+    padding: 25px;
+    border-radius: 25px;
+    gap: 18px;
+  }
+
+  .form textarea {
+    height: 140px;
+  }
+
+  .form button {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 70px 18px;
+  }
+
+  .top h2 {
+    font-size: 1.9rem;
+  }
+
+  .map {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftSide {
+    flex-direction: column;
+  }
+
+  .map {
+    order: 2;
+  }
+
+  .phoneCard {
+    order: 1;
+  }
+}
