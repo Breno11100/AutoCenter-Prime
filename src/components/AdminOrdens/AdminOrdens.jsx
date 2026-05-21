@@ -226,16 +226,16 @@ function AdminOrdens() {
                     Pendente
                   </option>
 
-                  <option value="em andamento">
+                  <option value="em_andamento">
                     Em andamento
                   </option>
 
-                  <option value="finalizada">
-                    Finalizada
+                  <option value="aguardando_peca">
+                    Aguardando peças
                   </option>
 
-                  <option value="cancelada">
-                    Cancelada
+                  <option value="finalizado">
+                    Finalizada
                   </option>
 
                 </select>
@@ -248,7 +248,7 @@ function AdminOrdens() {
                     atualizarOrdem(
                       item.id,
                       {
-                        valor: item.valor,
+                        valor: item.valor_total,
                         previsao_entrega:
                           item.previsao_entrega,
                         status: item.status

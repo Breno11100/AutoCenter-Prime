@@ -1,11 +1,8 @@
 .login {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    90deg,
-    #FFDF00,
-    #009B3A
-  );
+
+  background: linear-gradient(90deg, #FFDF00, #009B3A);
 
   display: flex;
   align-items: center;
@@ -26,10 +23,11 @@
   background: #171a21;
 
   border-radius: 24px;
-
   overflow: hidden;
 
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+
+  position: relative;
 }
 
 .left {
@@ -39,21 +37,12 @@
   flex-direction: column;
   justify-content: center;
 
-  background: linear-gradient(
-    90deg,
-    #000000,
-    #000000
-  );
+  background: #000;
 }
 
 .left h1 {
-  color: #ffffff;
-
+  color: #fff;
   font-size: 3rem;
-  font-weight: 700;
-
-  line-height: 1.1;
-
   margin-bottom: 20px;
 }
 
@@ -62,11 +51,9 @@
 }
 
 .left p {
-  color: #dddddd;
-
+  color: #ddd;
   font-size: 1.1rem;
   line-height: 1.7;
-
   max-width: 450px;
 }
 
@@ -84,16 +71,12 @@
 
   display: flex;
   flex-direction: column;
-
   gap: 20px;
 }
 
 .form h2 {
   color: #fff;
-
   font-size: 2rem;
-
-  margin-bottom: 10px;
 }
 
 .form input {
@@ -104,35 +87,23 @@
   outline: none;
 
   border-radius: 12px;
-
   background: #232833;
 
   padding: 0 18px;
 
   color: #fff;
-
-  font-size: 1rem;
-}
-
-.form input::placeholder {
-  color: #999;
 }
 
 .form button {
-  width: 100%;
   height: 55px;
 
   border: none;
-
   border-radius: 12px;
 
   background: #ffd000;
-
   color: #000;
 
-  font-size: 1rem;
   font-weight: 600;
-
   cursor: pointer;
 
   transition: 0.3s;
@@ -140,79 +111,60 @@
 
 .form button:hover {
   transform: translateY(-2px);
-
   background: #ffdf4d;
 }
 
-.form span {
-  color: #bdbdbd;
-
+.loginLink {
   text-align: center;
-
-  font-size: 0.95rem;
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
+.loginLink:hover {
+  color: #ffd000;
+}
+
+.logoBack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logoBack img {
+  width: 110px;
+}
+
+/* RESPONSIVO */
 @media (max-width: 900px) {
 
   .container {
     grid-template-columns: 1fr;
   }
 
-  .left {
-    padding: 50px 30px;
+  .left,
+  .right {
+    padding: 40px 24px;
+    text-align: center;
   }
 
-  .right {
-    padding: 50px 30px;
+  .logoBack img {
+    width: 50px;
+  }
+
+  .logoBack {
+  top: 0px;
+  left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    border-radius: 0;
   }
 
   .left h1 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
-
-}
-
-.loginLink {
-
-  color: #bdbdbd;
-
-  text-align: center;
-
-  font-size: 0.95rem;
-
-  text-decoration: none;
-
-  transition: 0.3s;
-
-}
-
-.loginLink:hover {
-
-  color: #ffd000;
-
-}
-
-.logoBack {
-
-  position: absolute;
-
-  top: 170px;
-  left: 410px;
-
-}
-
-.logoBack img {
-
-  width: 120px;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
-}
-
-.logoBack img:hover {
-
-  transform: scale(1.05);
-
 }

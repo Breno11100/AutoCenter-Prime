@@ -1,0 +1,83 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+.container h1 {
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+
+}
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  max-width: 500px;
+
+}
+
+.form label {
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+}
+
+.form input {
+
+  height: 45px;
+
+  border-radius: 12px;
+
+  border: 1px solid #2f3645;
+
+  background: #0f1117;
+
+  color: #ffffff;
+
+  padding: 0 15px;
+
+  outline: none;
+
+}
+
+.form input:focus {
+
+  border-color: #ffd000;
+
+}
+
+.salvar {
+
+  margin-top: 15px;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ffd000;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+.salvar:hover {
+
+  transform: translateY(-2px);
+
+}

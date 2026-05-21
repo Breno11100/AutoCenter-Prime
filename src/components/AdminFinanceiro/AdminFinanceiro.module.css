@@ -1,0 +1,116 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+.container h1 {
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+
+}
+
+/* RESUMO */
+
+.cards {
+
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+
+.cardResumo {
+
+  flex: 1;
+
+  min-width: 200px;
+
+  background: #171a21;
+
+  border: 1px solid #232833;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  color: #fff;
+
+}
+
+.cardResumo h3 {
+
+  color: #bdbdbd;
+
+  font-size: 0.9rem;
+
+}
+
+.cardResumo p {
+
+  font-size: 1.6rem;
+
+  font-weight: bold;
+
+  color: #ffd000;
+
+}
+
+/* LISTA */
+
+.lista {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.card {
+
+  background: #171a21;
+
+  border: 1px solid #232833;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+}
+
+.card h2 {
+
+  color: #ffffff;
+
+  margin-bottom: 10px;
+
+}
+
+.card p {
+
+  color: #bdbdbd;
+
+  margin-bottom: 6px;
+
+}
+
+@media (max-width: 768px) {
+
+  .card {
+
+    flex-direction: column;
+
+  }
+
+}
