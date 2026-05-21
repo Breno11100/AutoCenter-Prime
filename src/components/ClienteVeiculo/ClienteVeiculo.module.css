@@ -1,133 +1,144 @@
 .container {
-
   display: flex;
   flex-direction: column;
-
   gap: 25px;
-
   max-width: 700px;
-
 }
 
 .container h1 {
-
   color: #ffffff;
-
   font-size: 2.2rem;
-
 }
 
 form {
-
   display: flex;
   flex-direction: column;
-
   gap: 15px;
-
 }
 
 input {
-
   width: 100%;
-
   padding: 14px 16px;
-
   border: none;
   outline: none;
-
   border-radius: 10px;
-
   background: #232833;
-
   color: #ffffff;
-
   font-size: 1rem;
-
 }
 
 input:focus {
-
   outline: 1px solid #ffd000;
-
 }
 
 button {
-
   width: 100%;
-
   padding: 14px;
-
   border: none;
-
   border-radius: 10px;
-
   background: #ffd000;
-
-  color: #000000;
-
+  color: #000;
   font-size: 1rem;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
-
 }
 
 button:hover {
-
   background: #ffdf4d;
-
   transform: translateY(-2px);
-
 }
 
 .lista {
-
   display: flex;
   flex-direction: column;
-
   gap: 20px;
-
   margin-top: 30px;
-
 }
 
 .lista h2 {
-
   color: #ffffff;
-
   font-size: 1.7rem;
-
 }
 
 .card {
-
   background: #171a21;
-
   border: 1px solid #232833;
-
   border-radius: 16px;
-
   padding: 25px;
-
   display: flex;
   flex-direction: column;
-
   gap: 10px;
-
 }
 
 .card h3 {
-
   color: #ffffff;
-
   font-size: 1.3rem;
-
 }
 
 .card p {
-
   color: #bdbdbd;
+}
 
+/* =========================
+   📱 TABLET
+========================= */
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .container h1 {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+}
+
+/* =========================
+   📱 CELULAR
+========================= */
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+}
+
+/* =========================
+   📱 TELAS MUITO PEQUENAS
+========================= */
+@media (max-width: 360px) {
+
+  .container h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
 }

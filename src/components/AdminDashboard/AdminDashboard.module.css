@@ -68,3 +68,54 @@
   font-size: 2.7rem;
 
 }
+
+
+@media (max-width: 1024px) {
+
+  .cards {
+    gap: 18px;
+  }
+
+  .card strong {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card strong {
+    font-size: 2rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card strong {
+    font-size: 1.8rem;
+  }
+
+}

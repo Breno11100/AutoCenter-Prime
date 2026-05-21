@@ -98,3 +98,77 @@
   background: #ff1f1f !important;
   color: white !important;
 }
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 220px;
+    padding: 30px 20px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 15px;
+    gap: 10px;
+
+    border-right: none;
+    border-bottom: 1px solid #232833;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .sidebar button {
+    flex: 1 1 45%;
+    height: 45px;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+@media (max-width: 480px) {
+
+  .sidebar button {
+    flex: 1 1 100%;
+  }
+
+  .content h1 {
+    font-size: 1.6rem;
+  }
+
+}

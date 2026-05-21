@@ -185,3 +185,79 @@
   background: #ffd000;
   color: #000;
 }
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topo h1 {
+    font-size: 1.8rem;
+  }
+
+  .topo input {
+    width: 100%;
+  }
+
+  /* FILTROS */
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* CARD */
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .info {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .excluir {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .filtros button {
+    flex: 1 1 100%;
+  }
+
+  .topo h1 {
+    font-size: 1.5rem;
+  }
+
+}

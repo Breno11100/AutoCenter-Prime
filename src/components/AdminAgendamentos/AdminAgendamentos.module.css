@@ -150,3 +150,82 @@
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 168, 107, 0.4);
 }
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .card h2,
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  /* BOTÕES */
+  .buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  /* FILTROS */
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+@media (max-width: 480px) {
+
+  .filtros button {
+    flex: 1 1 100%;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+}

@@ -394,3 +394,102 @@
   color: white;
 }
 
+/*Responsivo*/
+
+@media (max-width: 1024px) {
+
+  .card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  /* CARD */
+  .card {
+    flex-direction: column;
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  /* STATUS */
+  .statusArea select {
+    width: 100%;
+  }
+
+  /* BOTÕES DO CARD (se tiver outros estilos futuros) */
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  /* FILTROS */
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* MODAL */
+  .modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .servicoItem {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .nome {
+    font-size: 0.85rem;
+  }
+
+  .valor {
+    font-size: 0.85rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .filtros button {
+    flex: 1 1 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.1rem;
+  }
+
+  .total {
+    font-size: 0.85rem;
+  }
+
+}

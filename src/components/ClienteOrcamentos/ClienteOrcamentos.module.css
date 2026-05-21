@@ -141,3 +141,114 @@
   color: #ffd000;
 
 }
+
+@media (max-width: 1024px) {
+
+  .container {
+    gap: 25px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .topo h2 {
+    font-size: 1.3rem;
+  }
+
+  .servico {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    gap: 20px;
+  }
+
+  .container h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .card {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  /* topo quebra em coluna */
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topo h2 {
+    font-size: 1.2rem;
+  }
+
+  .topo span {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .servicos h3 {
+    font-size: 1.1rem;
+  }
+
+  .servico {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .topo h2 {
+    font-size: 1.1rem;
+  }
+
+  .topo span {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .info strong {
+    font-size: 0.95rem;
+  }
+
+  .servico {
+    padding: 10px 12px;
+  }
+
+  .servico p {
+    font-size: 0.9rem;
+  }
+
+  .servico strong {
+    font-size: 0.9rem;
+  }
+}

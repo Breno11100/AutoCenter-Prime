@@ -89,3 +89,64 @@ button:hover {
   transform: translateY(-2px);
 
 }
+
+@media (max-width: 1024px) {
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 100%;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .container h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  form {
+    gap: 14px;
+  }
+
+  input {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

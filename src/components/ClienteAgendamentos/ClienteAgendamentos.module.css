@@ -149,3 +149,103 @@ button:hover {
   font-size: 0.9rem;
 
 }
+
+@media (max-width: 1024px) {
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .lista h2 {
+    font-size: 1.6rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .lista {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 18px;
+    gap: 8px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card span {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}

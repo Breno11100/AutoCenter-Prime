@@ -131,8 +131,71 @@
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
-  .card {
+
+@media (max-width: 1024px) {
+
+  .cards {
     flex-direction: column;
   }
+
+  .cardResumo {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  /* RESUMO */
+  .cards {
+    flex-direction: column;
+  }
+
+  .cardResumo {
+    width: 100%;
+  }
+
+  .cardResumo p {
+    font-size: 1.4rem;
+  }
+
+  /* CARD PRINCIPAL */
+  .card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .valorDestaque {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* SERVIÇOS */
+  .card div:last-child div {
+    padding: 8px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .cardResumo p {
+    font-size: 1.2rem;
+  }
+
+  .valorDestaque {
+    font-size: 1.1rem;
+  }
+
 }

@@ -172,3 +172,81 @@
   color: #000;
 }
 
+/*Responsivo*/
+
+@media (max-width: 1024px) {
+
+  .card {
+    flex-direction: column;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  /* TOPO */
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topo input {
+    width: 100%;
+  }
+
+  /* FILTROS */
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* CARD */
+  .card {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  /* INFO */
+  .info {
+    width: 100%;
+  }
+
+  .excluir {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .filtros button {
+    flex: 1 1 100%;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+}
