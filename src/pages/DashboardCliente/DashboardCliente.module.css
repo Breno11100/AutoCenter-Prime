@@ -84,3 +84,17 @@
   color: #ffffff;
 
 }
+
+.sair {
+  margin-top: 30px;
+
+  background: #ff3b3b !important;
+  color: white !important;
+
+  font-weight: 600;
+}
+
+.sair:hover {
+  background: #ff1f1f !important;
+  color: white !important;
+}

@@ -116,33 +116,23 @@
 }
 
 .excluir {
-
   margin-top: 10px;
-
   border: none;
-
   height: 45px;
-
   padding: 0 20px;
-
   border-radius: 12px;
 
-  background: #ff3b3b;
-
-  color: #ffffff;
-
+  background: #ffb020; /* amarelo = aviso / desativar */
+  color: #111;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
-
 }
 
 .excluir:hover {
 
   transform: translateY(-2px);
-
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -153,4 +143,31 @@
 
   }
 
+}
+
+.cardInativo {
+  opacity: 0.6;
+  filter: grayscale(1);
+  border: 1px solid #333;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filtros button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #232833;
+  color: white;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background: #ffd000;
+  color: #000;
 }

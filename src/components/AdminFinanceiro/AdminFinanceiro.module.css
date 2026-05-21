@@ -1,116 +1,138 @@
 .container {
-
   display: flex;
   flex-direction: column;
-
   gap: 30px;
-
 }
 
 .container h1 {
-
   color: #ffffff;
-
   font-size: 2.5rem;
-
 }
 
 /* RESUMO */
-
 .cards {
-
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-
 }
 
 .cardResumo {
-
   flex: 1;
-
   min-width: 200px;
 
   background: #171a21;
-
   border: 1px solid #232833;
-
-  border-radius: 20px;
+  border-radius: 18px;
 
   padding: 20px;
-
   color: #fff;
 
+  transition: 0.2s;
+}
+
+.cardResumo:hover {
+  transform: translateY(-3px);
+  border-color: #ffd000;
 }
 
 .cardResumo h3 {
-
   color: #bdbdbd;
-
   font-size: 0.9rem;
-
 }
 
 .cardResumo p {
-
   font-size: 1.6rem;
-
   font-weight: bold;
-
   color: #ffd000;
-
 }
 
 /* LISTA */
-
 .lista {
-
   display: flex;
   flex-direction: column;
-
   gap: 20px;
-
 }
 
+/* CARD PRINCIPAL */
 .card {
-
   background: #171a21;
-
   border: 1px solid #232833;
-
-  border-radius: 20px;
+  border-radius: 18px;
 
   padding: 25px;
 
   display: flex;
   justify-content: space-between;
-
   flex-wrap: wrap;
 
+  transition: 0.2s;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #2f3645;
+}
+
+/* CLIENTE */
 .card h2 {
-
   color: #ffffff;
-
   margin-bottom: 10px;
-
 }
 
 .card p {
-
   color: #bdbdbd;
-
   margin-bottom: 6px;
-
 }
 
+/* 🔥 BLOCO DO VALOR (DESTAQUE PRINCIPAL) */
+.card div:last-child p:nth-child(3) {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffd000;
+}
+
+/* 🔥 SERVIÇOS */
+.card div:last-child div {
+  margin-top: 10px;
+  padding: 10px;
+
+  background: #0f1117;
+  border: 1px solid #2f3645;
+  border-radius: 12px;
+}
+
+.card div:last-child div strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* ITEM DE SERVIÇO */
+.card div:last-child div p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #bdbdbd;
+}
+
+/* 💰 HIGHLIGHT FINAL DO VALOR */
+.valorDestaque {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffd000;
+
+  background: rgba(255, 208, 0, 0.08);
+  border: 1px solid rgba(255, 208, 0, 0.3);
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-
   .card {
-
     flex-direction: column;
-
   }
-
 }

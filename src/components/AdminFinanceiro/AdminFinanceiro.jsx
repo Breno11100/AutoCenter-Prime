@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
 import { supabase } from "../../services/supabase";
-
 import styles from "./AdminFinanceiro.module.css";
 
 function AdminFinanceiro() {
@@ -26,8 +24,13 @@ function AdminFinanceiro() {
         .select(`
           *,
           usuarios!cliente_id (nome),
-          veiculos (marca, modelo, placa)
+          veiculos (marca, modelo, placa),
+          ordem_servico_itens (
+            valor,
+            servicos (nome)
+          )
         `)
+        .eq("status", "finalizado")
         .order("data_entrada", { ascending: false });
 
     if (error) {
@@ -35,38 +38,32 @@ function AdminFinanceiro() {
       return;
     }
 
-    console.log("ORDENS:", data);
-
     setOrdens(data || []);
     calcularResumo(data || []);
   }
 
   function calcularResumo(data) {
 
-  const total = data.length;
+    const total = data.length;
 
-  const finalizadas = data.filter((o) =>
-    String(o.status).toLowerCase().trim() === "finalizado"
-  ).length;
+    const faturamento = data.reduce((acc, o) => {
 
-  const faturamento = data
-    .filter((o) =>
-      String(o.status).toLowerCase().trim() === "finalizado"
-    )
-    .reduce((acc, o) => {
-      const valor = Number(o.valor_total ?? o.valor ?? 0);
-      return acc + valor;
+      const somaItens =
+        o.ordem_servico_itens?.reduce((sum, item) => {
+          return sum + Number(item.valor || 0);
+        }, 0) || 0;
+
+      return acc + somaItens;
     }, 0);
 
-  setResumo({
-    total,
-    finalizadas,
-    faturamento
-  });
-}
+    setResumo({
+      total,
+      finalizadas: total,
+      faturamento
+    });
+  }
 
   return (
-
     <section className={styles.container}>
 
       <h1>Financeiro</h1>
@@ -75,20 +72,13 @@ function AdminFinanceiro() {
       <div className={styles.cards}>
 
         <div className={styles.cardResumo}>
-          <h3>Total de OS</h3>
-          <p>{resumo.total}</p>
-        </div>
-
-        <div className={styles.cardResumo}>
           <h3>Finalizadas</h3>
           <p>{resumo.finalizadas}</p>
         </div>
 
         <div className={styles.cardResumo}>
           <h3>Faturamento</h3>
-          <p>
-            R$ {resumo.faturamento.toFixed(2)}
-          </p>
+          <p>R$ {resumo.faturamento.toFixed(2)}</p>
         </div>
 
       </div>
@@ -96,40 +86,54 @@ function AdminFinanceiro() {
       {/* LISTA */}
       <div className={styles.lista}>
 
-        {ordens.map((o) => (
+        {ordens.map((o) => {
 
-          <div key={o.id} className={styles.card}>
+          const totalOS =
+            o.ordem_servico_itens?.reduce((acc, item) => {
+              return acc + Number(item.valor || 0);
+            }, 0) || 0;
 
-            <div>
-              <h2>{o.usuarios?.nome}</h2>
+          return (
+            <div key={o.id} className={styles.card}>
 
-              <p>
-                {o.veiculos?.marca} {o.veiculos?.modelo}
-              </p>
+              <div>
+                <h2>{o.usuarios?.nome}</h2>
 
-              <p>
-                Placa: {o.veiculos?.placa}
-              </p>
+                <p>
+                  {o.veiculos?.marca} {o.veiculos?.modelo}
+                </p>
+
+                <p>
+                  Placa: {o.veiculos?.placa}
+                </p>
+              </div>
+
+              <div>
+
+                <p>Entrada: {o.data_entrada}</p>
+
+                <p className={styles.valorDestaque}>
+                  Valor OS: R$ {totalOS.toFixed(2)}
+                </p>
+
+                <div>
+
+                  {o.ordem_servico_itens?.map((item, index) => (
+                    <p key={index}>
+                      • {item.servicos?.nome} — R$ {item.valor}
+                    </p>
+                  ))}
+                </div>
+
+              </div>
+
             </div>
-
-            <div>
-              <p>Status: {o.status}</p>
-
-              <p>Entrada: {o.data_entrada}</p>
-
-              <p>
-                Valor: R$ {Number(o.valor_total ?? o.valor ?? 0).toFixed(2)}
-              </p>
-            </div>
-
-          </div>
-
-        ))}
+          );
+        })}
 
       </div>
 
     </section>
-
   );
 }
 

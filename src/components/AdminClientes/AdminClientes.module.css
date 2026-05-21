@@ -164,3 +164,24 @@
   }
 
 }
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #232833;
+  color: white;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background: #ffd000;
+  color: #000;
+}
