@@ -1,0 +1,181 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+.container h1 {
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+
+}
+
+.lista {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.card {
+
+  background: #171a21;
+
+  border: 1px solid #232833;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+.card h2 {
+
+  color: #ffffff;
+
+  margin-bottom: 10px;
+
+}
+
+.card p {
+
+  color: #bdbdbd;
+
+  margin-bottom: 8px;
+
+}
+
+.card label {
+
+  display: block;
+
+  margin-top: 15px;
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+}
+
+.card input,
+.card select {
+
+  width: 100%;
+
+  height: 45px;
+
+  border: 1px solid #2f3645;
+
+  border-radius: 12px;
+
+  background: #0f1117;
+
+  color: #ffffff;
+
+  padding: 0 15px;
+
+  outline: none;
+
+  font-size: 0.95rem;
+
+}
+
+.card input:focus,
+.card select:focus {
+
+  border-color: #ffd000;
+
+}
+
+.card span {
+
+  display: inline-block;
+
+  margin-top: 15px;
+
+  background: #232833;
+
+  padding: 8px 14px;
+
+  border-radius: 10px;
+
+  color: #ffd000;
+
+  font-weight: 600;
+
+}
+
+.buttons {
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+}
+
+.buttons button,
+.salvar {
+
+  border: none;
+
+  height: 45px;
+
+  padding: 0 20px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  background: #ffd000;
+
+  color: #000;
+
+  transition: 0.3s;
+
+}
+
+.buttons button:hover,
+.salvar:hover {
+
+  transform: translateY(-2px);
+
+}
+
+.salvar {
+
+  margin-top: 20px;
+
+  width: 100%;
+
+}
+
+@media (max-width: 768px) {
+
+  .card {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+}

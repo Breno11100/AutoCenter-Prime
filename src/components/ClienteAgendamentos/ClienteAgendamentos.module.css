@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: 600px;
+}
+
+.container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS / TEXTAREA / SELECT */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: #232833;
+  color: #ffffff;
+
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+/* FOCUS (efeito profissional) */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #ffd000;
+  transform: scale(1.01);
+}
+
+/* TEXTAREA altura maior */
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* BOTÃO */
+button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ffd000;
+  color: #000;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffdf4d;
+  transform: translateY(-2px);
+}
+
+.lista {
+
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.lista h2 {
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+
+}
+
+.card {
+
+  background: #171a21;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  border: 1px solid #232833;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+}
+
+.card h3 {
+
+  color: #ffffff;
+
+  font-size: 1.3rem;
+
+}
+
+.card p {
+
+  color: #bdbdbd;
+
+}
+
+.card span {
+
+  width: fit-content;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #ffd000;
+
+  color: #000000;
+
+  font-weight: 600;
+
+  font-size: 0.9rem;
+
+}

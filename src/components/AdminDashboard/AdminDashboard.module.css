@@ -1,0 +1,70 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+
+}
+
+.container h1 {
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+
+}
+
+.cards {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+
+}
+
+.card {
+
+  background: #171a21;
+
+  border: 1px solid #232833;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  transition: 0.3s;
+
+}
+
+.card:hover {
+
+  transform: translateY(-5px);
+
+  border-color: #ffd000;
+
+}
+
+.card h3 {
+
+  color: #bdbdbd;
+
+  font-size: 1rem;
+
+}
+
+.card strong {
+
+  color: #ffffff;
+
+  font-size: 2.7rem;
+
+}

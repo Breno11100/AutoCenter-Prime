@@ -1,0 +1,143 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+.container h1 {
+
+  color: #ffffff;
+
+  font-size: 2.2rem;
+
+}
+
+.lista {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+
+}
+
+.card {
+
+  background: #171a21;
+
+  border: 1px solid #232833;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.topo {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+.topo h2 {
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+}
+
+.topo span {
+
+  background: #ffd000;
+
+  color: #000000;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+}
+
+.card p {
+
+  color: #bdbdbd;
+
+  line-height: 1.6;
+
+}
+
+.info {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+}
+
+.info strong {
+
+  color: #ffffff;
+
+}
+
+.servicos {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+.servicos h3 {
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+
+}
+
+.servico {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #232833;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+}
+
+.servico p {
+
+  color: #ffffff;
+
+}
+
+.servico strong {
+
+  color: #ffd000;
+
+}
