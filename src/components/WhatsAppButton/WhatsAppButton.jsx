@@ -1,5 +1,5 @@
 import styles from "./WhatsAppButton.module.css";
-import whatsappIcon from "../../assets/Whatsapp_icon.png";
+import whatsappIcon from "../../assets/WhatsApp_icon.png";
 
 function WhatsAppButton() {
   return (
